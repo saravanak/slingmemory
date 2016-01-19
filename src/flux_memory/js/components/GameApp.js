@@ -4,7 +4,7 @@ var MessageStore = require('../stores/MessageStore');
 var Tile = require('./Tile.js');
 var Status = require('./Status.js');
 var TileActions = require('../actions/TileActions');
-require('../../css/styles.css');
+require('../../../css/styles.css');
 
 /**
  * Retrieve the current TODO data from the TodoStore
