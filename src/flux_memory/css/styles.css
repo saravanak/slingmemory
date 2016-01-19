@@ -1,0 +1,89 @@
+.loading {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sk-spinner-wave.sk-spinner {
+  height: 70px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sk-spinner-wave.sk-spinner div {
+  background-color: #fff;
+  width: 7px;
+  margin: 0 3px 0 0;
+}
+.retry {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#app {
+  margin: 30px auto 0;
+  width: 660px;
+}
+#app .retry {
+  margin-top: 20px;
+}
+#app .status {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+#app .flip-container {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  font-size: 150px;
+}
+#app .flip-container,
+#app .front,
+#app .back {
+  width: 150px;
+  height: 150px;
+}
+#app .flip-container .flipper,
+#app .front .flipper,
+#app .back .flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#app .flip-container .flipper.flipped,
+#app .front .flipper.flipped,
+#app .back .flipper.flipped {
+  transform: rotateY(180deg);
+}
+#app .flip-container .flipper .front,
+#app .front .flipper .front,
+#app .back .flipper .front,
+#app .flip-container .flipper .back,
+#app .front .flipper .back,
+#app .back .flipper .back {
+  box-shadow: 1px 1px 2px #000;
+  line-height: 150px;
+  border-radius: 10px;
+  text-align: center;
+  backface-visibility: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#app .flip-container .flipper .front,
+#app .front .flipper .front,
+#app .back .flipper .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+#app .flip-container .flipper .back,
+#app .front .flipper .back,
+#app .back .flipper .back {
+  background-size: cover;
+  transform: rotateY(180deg);
+}
