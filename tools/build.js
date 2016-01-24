@@ -20,11 +20,11 @@ webpack(webpackConfig).run(function(err, stats) {
 
   var jsonStats = stats.toJson();
 
-  if (jsonStats.hasErrors) return jsonStats.errors.map(error => console.log(error.red));
+  if (jsonStats.hasErrors) return jsonStats.errors.map(function(error) { console.log(error.red)});
 
   if (jsonStats.hasWarnings && !inSilentMode) {
     console.log('Webpack generated the following warnings: '.bold.yellow);
-    jsonStats.warnings.map(warning => console.log(warning.yellow));
+    jsonStats.warnings.map(function(warning) {console.log(warning.yellow)});
   }
 
   if (!inSilentMode) console.log('Webpack stats: ' + stats.toString());
